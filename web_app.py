@@ -20,6 +20,10 @@ bot_task: asyncio.Task | None = None
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Auto-start bot on server launch
+    global bot_task
+    bot_task = asyncio.create_task(run_bot())
+    logger.info("Bot auto-started on server launch.")
     yield
     # On shutdown, ensure the bot task is cancelled
     global bot_task
