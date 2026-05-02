@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN mkdir -p /app/data
 
-CMD ["python", "-m", "bot.main"]
+CMD ["python", "-m", "uvicorn", "web_app:app", "--host", "0.0.0.0", "--port", "10000"]
