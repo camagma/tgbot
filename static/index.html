@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <div class="container glass-panel">
+        <header>
+            <div class="header-content">
+                <h1>менеджер бота</h1>
+                <div class="status-badge" id="botStatus">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Checking...</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary" disabled>запустить</button>
+                <button id="stopBtn" class="btn btn-danger" disabled>остановить</button>
+            </div>
+        </header>
+
+        <section class="settings-section">
+            <h2>настройки бота</h2>
+            <p class="section-description">обновите настройки вашего бота. Изменения будут применены при следующем запуске бота.</p>
+            
+            <form id="settingsForm">
+                <div class="form-grid" id="settingsContainer">
+                  
+                    <div class="loader-container">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success" id="saveSettingsBtn">сохранить</button>
+                    <span class="save-status" id="saveStatus"></span>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

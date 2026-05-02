@@ -1,0 +1,21 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (SECURITY RISK IF PUSHED)
+.env
+
+# SQLite databases
+*.db
+*.sqlite3
+data/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
